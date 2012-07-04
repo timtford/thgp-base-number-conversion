@@ -15,9 +15,14 @@
 @implementation thgpViewController 
 
 @synthesize inputText, outputText;
+@synthesize singlePicker;
+@synthesize pickerData;
+
 
 - (void)viewDidLoad
 {
+    NSArray *array = [[NSArray alloc]        initWithObjects:@"1",@"2",@"3",@"4",@"5", @"6", @"7", @"8", @"9",nil];
+    self.pickerData = array;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -32,6 +37,31 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
+
+-(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+-(NSInteger)pickerView:(UIPickerView *)pickerView
+numberOfRowsInComponent:(NSInteger)component
+{
+    return [pickerData count];
+}
+
+-(NSString *)pickerView:(UIPickerView *)pickerView
+            titleForRow:(NSInteger)row
+           forComponent:(NSInteger)component 
+{
+    return[pickerData objectAtIndex:row];
+}
+
+
+
+
+
+
 /* Name function converter it takes base 2-9 and convert into binary*/
 -(IBAction)converter:(id)sender
 {
@@ -44,9 +74,14 @@
         int remainder;
         int B[20];
         int base;
+    
+        NSInteger row = [singlePicker selectedRowInComponent:0];
+        NSString *selected = [pickerData objectAtIndex:row];
+    
         NSLog (@"Input Text = %@", inputText);
         
         NSLog(@"Input Number = %d", Q);
+    
         
         for (I = 0; I < 20; I = I + 1) {
             B[I] = 0;
