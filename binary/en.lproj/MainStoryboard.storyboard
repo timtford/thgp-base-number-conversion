@@ -21,28 +21,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Input Decimal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="CtJ-7H-VBM">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Input Decimal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="CtJ-7H-VBM">
                                 <rect key="frame" x="15" y="6" width="105" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="EEY-Ya-8HQ">
-                                <rect key="frame" x="34" y="210" width="102" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="EEY-Ya-8HQ">
+                                <rect key="frame" x="22" y="197" width="102" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="P4n-Rd-Pgd" userLabel="Text - Output">
-                                <rect key="frame" x="29" y="409" width="262" height="31"/>
+                                <rect key="frame" x="20" y="235" width="262" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1K4-E8-XyE">
-                                <rect key="frame" x="41" y="165" width="79" height="37"/>
+                                <rect key="frame" x="15" y="152" width="79" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="convert">
@@ -54,7 +54,7 @@
                                 </state>
                             </button>
                             <pickerView contentMode="scaleToFill" id="SZA-Qg-NTZ">
-                                <rect key="frame" x="158" y="11" width="133" height="216"/>
+                                <rect key="frame" x="164" y="6" width="97" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                         </subviews>
@@ -72,14 +72,7 @@
         <class className="thgpViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/thgpViewController.h"/>
             <relationships>
-                <relationship kind="action" name="base2:"/>
-                <relationship kind="action" name="base3:"/>
-                <relationship kind="action" name="base4:"/>
-                <relationship kind="action" name="base5:"/>
-                <relationship kind="action" name="base6:"/>
-                <relationship kind="action" name="base7:"/>
-                <relationship kind="action" name="base8:"/>
-                <relationship kind="action" name="base9:"/>
+                <relationship kind="action" name="converter:"/>
                 <relationship kind="outlet" name="inputText" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="outputText" candidateClass="UITextField"/>
             </relationships>
