@@ -21,7 +21,7 @@
 
 - (void)viewDidLoad
 {
-    NSArray *array = [[NSArray alloc]        initWithObjects:@"1",@"2",@"3",@"4",@"5", @"6", @"7", @"8", @"9",nil];
+    NSArray *array = [[NSArray alloc]        initWithObjects:@"2",@"3",@"4",@"5", @"6", @"7", @"8", @"9",nil];
     self.pickerData = array;
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -77,11 +77,14 @@ numberOfRowsInComponent:(NSInteger)component
     
         NSInteger row = [singlePicker selectedRowInComponent:0];
         NSString *selected = [pickerData objectAtIndex:row];
+        base =[selected intValue];
     
         NSLog (@"Input Text = %@", inputText);
         
         NSLog(@"Input Number = %d", Q);
-    
+        NSLog(@"base = %d",base); 
+        NSLog(@"pickerValue = %@", selected);        
+       
         
         for (I = 0; I < 20; I = I + 1) {
             B[I] = 0;
@@ -101,6 +104,15 @@ numberOfRowsInComponent:(NSInteger)component
         outputText.text = output;
 
 }
+
+-(IBAction)removeKeyboard
+{
+    [inputText resignFirstResponder];
+
+
+}
+
+
 
 /****
  * BINARY NUMBER (Base 2) Conversion
